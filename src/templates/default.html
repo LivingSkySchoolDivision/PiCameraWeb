@@ -10,20 +10,30 @@
     <script src="static/js/bootstrap.min.js"></script>
 </head>
 <body>
+<form method="post" action="/">
     <div class="container">
         <h1>🥧 LSSD Experimental Pi Camera</h1>
+        <br/>
+        <h2>Stream Control</h2>        
         <p>
-            Box for youtube stream key input
+            <div class="form-group">
+                <label for="exampleInputEmail1">YoubTube Stream Key</label>
+                <input class="form-control" type="text" name="youtube_stream_key">
+            </div> 
         </p>
         <p>
-            Video encoding is [ON|OFF] [button to start] [button to kill]
+            Video encoding is <b>UNKNOWN</b>
+            <br/>
+            <button class="btn btn-success" name="triggered_action" value="start_stream">START STREAM</button>
+            <button class="btn btn-danger" name="triggered_action" value="kill_stream">KILL STREAM</button>
         </p>
+        <br/><br/><br/><br/>
+        <h2>Maintenance</h2>
+        <br/>
         <p>
-            Maybe a console log or something?
-        </p>
-        <p>
-            [Reboot button]
+            <button class="btn btn-outline-danger btn-sm" name="triggered_action" value="reboot">REBOOT CAMERA</button>
         </p>
     </div>
+</form>
 </body>
 </html>
